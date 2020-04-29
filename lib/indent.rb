@@ -4,33 +4,21 @@ require 'colorize'
 module Indent
   def bracket_exists (args)
     bracket_lines = []
-    args.each { |x|
+    args.each_with_index { |x, i|
       x.reset
-      if x.exist?(Regexp.new("{"))
-        bracket_lines << x
-      elsif x.exist?(Regexp.new("}"))
-        bracket_lines << x
+      if x.exist?(Regexp.new("{")) && x.match?(Regexp.new("^ +.*"))
+        bracket_lines << "Extra space found on line #{i + 1}"
+      elsif x.exist?(Regexp.new("}")) && x.match?(Regexp.new("^ +.*"))
+        bracket_lines << "Extra space found on line #{i + 1}"
       end
     }
     bracket_lines
   end
 
-  def bracket_space (args)
-    bracket_space_errors = bracket_exists (args)
-    space_array = []
-    bracket_space_errors.each { |x|
-      x.reset
-      if x.match?(Regexp.new("^ +.*"))
-        space_array << x
-      end
-    }
-    space_array
-  end
-
   def bracket_message (args)
-    message_array = bracket_space (args)
-    message_array.each { |x|
-      puts "Extra space found on #{x}"
+    message_array = bracket_exists (args)
+    message_array.each_with_index { |x|
+      puts x
     }
   end
 end
