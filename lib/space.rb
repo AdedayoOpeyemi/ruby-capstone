@@ -1,12 +1,10 @@
-require 'strscan'
 require 'colorize'
 
 module Space
   def body_content (args)
     body_lines = []
     args.each_with_index { |x, i|
-      x.reset
-      if x.exist?(/:/) && !x.match?(/^ +.*/) && (!x.exist?(/}/)||!x.exist?(/{/))
+      if x.match?(/:/) && !x.match?(/^ +.*/) && (!x.match?(/}/)||!x.match?(/{/))
         body_lines << "Add space at the beginning of line #{i + 1}"
       end
     }

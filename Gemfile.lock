@@ -2,14 +2,12 @@ GEM
   remote: https://rubygems.org/
   specs:
     colorize (0.8.1)
-    strscan (1.0.3)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   colorize
-  strscan
 
 BUNDLED WITH
    2.1.4

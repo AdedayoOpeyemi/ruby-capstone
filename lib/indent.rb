@@ -1,12 +1,10 @@
-require 'strscan'
 require 'colorize'
 
 module Indent
   def bracket_exists (args)
     bracket_lines = []
     args.each_with_index { |x, i|
-      x.reset
-      if (x.exist?(/{/) || x.exist?(/}/)) && x.match?(/^ +.*/)
+      if (x.match?(/{/) || x.match?(/}/)) && x.match?(/^ +.*/)
         bracket_lines << "Extra space found at the beginning of line #{i + 1}"
       end
     }
