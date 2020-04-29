@@ -7,9 +7,9 @@ module Indent
     args.each_with_index { |x, i|
       x.reset
       if x.exist?(Regexp.new("{")) && x.match?(Regexp.new("^ +.*"))
-        bracket_lines << "Extra space found on line #{i + 1}"
+        bracket_lines << "Extra space found at the beginning of line #{i + 1}"
       elsif x.exist?(Regexp.new("}")) && x.match?(Regexp.new("^ +.*"))
-        bracket_lines << "Extra space found on line #{i + 1}"
+        bracket_lines << "Extra space found at the beginning of line #{i + 1}"
       end
     }
     bracket_lines
