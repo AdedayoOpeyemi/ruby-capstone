@@ -5,3 +5,5 @@ include Indent
 
 file = "../css_test.css"
 b = Errors.new(file)
+
+bracket_message(b.args)

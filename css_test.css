@@ -8,14 +8,14 @@ body {
 }
 
 /* Applies to all <h1>...</h1> elements. */
-h1 {
+ h1 {
   font-size: 35px;
   font-weight: normal;
   margin-top: 5px;
-}
+ }
 
 /* Applies to all elements with <... class="someclass"> specified. */
-.someclass { color: red; }
+ .someclass { color: red; }
 
 /* Applies to the element with <... id="someid"> specified. */
 #someid { color: green; }
