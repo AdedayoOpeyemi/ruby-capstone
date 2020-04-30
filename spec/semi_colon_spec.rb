@@ -2,8 +2,7 @@ require_relative '../lib/semi_colon.rb'
 require_relative '../lib/errors.rb'
 
 RSpec.describe SemiColon do
-
-include SemiColon
+  include SemiColon
 
   describe '#semi_colon_message' do
     it 'outputs an error message when there\'s an semi-colon missing at the end of a line' do

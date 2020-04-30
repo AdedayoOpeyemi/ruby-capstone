@@ -2,8 +2,7 @@ require_relative '../lib/space.rb'
 require_relative '../lib/errors.rb'
 
 RSpec.describe Space do
-
-include Space
+  include Space
 
   describe '#body_message' do
     it 'outputs an error message when there\'s a space missing at the end of a body line' do

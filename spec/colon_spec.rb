@@ -2,8 +2,7 @@ require_relative '../lib/colon.rb'
 require_relative '../lib/errors.rb'
 
 RSpec.describe Colon do
-
-include Colon
+  include Colon
 
   describe '#colon_space_message' do
     it 'outputs an error message when there\'s a missing space in front of a colon' do

@@ -2,8 +2,7 @@ require_relative '../lib/indent.rb'
 require_relative '../lib/errors.rb'
 
 RSpec.describe Indent do
-
-include Indent
+  include Indent
 
   describe '#bracket_message' do
     it 'outputs an error message when there\'s an extra space in the beginning of a line' do

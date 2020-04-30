@@ -2,8 +2,7 @@ require_relative '../lib/zero_unit.rb'
 require_relative '../lib/errors.rb'
 
 RSpec.describe ZeroUnit do
-
-include ZeroUnit
+  include ZeroUnit
 
   describe '#zero_unit_message' do
     it 'outputs an error message when there\'s a space missing at the end of a body line' do
