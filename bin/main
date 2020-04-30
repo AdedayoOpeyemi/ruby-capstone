@@ -15,10 +15,10 @@ include SemiColon
 include ZeroUnit
 
 file = ARGV.shift
-b = Errors.new(file)
+linter = Errors.new(file)
 
-bracket_message(b.args)
-body_message(b.args)
-colon_space_message(b.args)
-semi_colon_message(b.args)
-zero_unit_message(b.args)
+# bracket_message(linter.args)
+# body_message(linter.args)
+colon_space_message(linter.args)
+# semi_colon_message(linter.args)
+# zero_unit_message(linter.args)
