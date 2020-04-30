@@ -1,6 +1,8 @@
 require 'colorize'
 
 module Indent
+  private
+
   def bracket_exists(args)
     bracket_lines = []
     args.each_with_index do |x, i|
@@ -10,6 +12,8 @@ module Indent
     end
     bracket_lines
   end
+
+  public
 
   def bracket_message(args)
     message_array = bracket_exists args

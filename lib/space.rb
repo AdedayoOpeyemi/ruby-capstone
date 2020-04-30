@@ -1,6 +1,8 @@
 require 'colorize'
 
 module Space
+  private
+
   def body_content(args)
     body_lines = []
     args.each_with_index do |x, i|
@@ -10,6 +12,8 @@ module Space
     end
     body_lines
   end
+
+  public
 
   def body_message(args)
     message_array = body_content args

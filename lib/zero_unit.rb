@@ -1,6 +1,8 @@
 require 'colorize'
 
 module ZeroUnit
+  private
+
   def zero_found(args)
     zero_array = []
     args.each_with_index do |x, i|
@@ -8,6 +10,8 @@ module ZeroUnit
     end
     zero_array
   end
+
+  public
 
   def zero_unit_message(args)
     message_array = zero_found args

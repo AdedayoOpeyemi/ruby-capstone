@@ -1,6 +1,8 @@
 require 'colorize'
 
 module Colon
+  private
+
   def colon_space(args)
     no_empty = []
     args.each_with_index do |x, i|
@@ -8,6 +10,8 @@ module Colon
     end
     no_empty
   end
+
+  public
 
   def colon_space_message(args)
     message_array = colon_space args

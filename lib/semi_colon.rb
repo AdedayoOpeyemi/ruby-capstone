@@ -1,6 +1,8 @@
 require 'colorize'
 
 module SemiColon
+  private
+
   def semi_colon_space(args)
     missing_semi = []
     args.each_with_index do |x, i|
@@ -10,6 +12,8 @@ module SemiColon
     end
     missing_semi
   end
+
+  public
 
   def semi_colon_message(args)
     message_array = semi_colon_space args
