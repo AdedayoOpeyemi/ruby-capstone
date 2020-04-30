@@ -17,8 +17,8 @@ include ZeroUnit
 file = ARGV.shift
 linter = Errors.new(file)
 
-# bracket_message(linter.args)
-# body_message(linter.args)
+bracket_message(linter.args)
+body_message(linter.args)
 colon_space_message(linter.args)
-# semi_colon_message(linter.args)
-# zero_unit_message(linter.args)
+semi_colon_message(linter.args)
+zero_unit_message(linter.args)
