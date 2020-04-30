@@ -1,3 +1,5 @@
+#!/usr/bin/env ruby
+
 require_relative '../lib/errors.rb'
 require_relative '../lib/indent.rb'
 require_relative '../lib/space.rb'

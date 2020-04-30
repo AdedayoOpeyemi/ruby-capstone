@@ -1,3 +1,5 @@
+#!/usr/bin/env ruby
+
 class Errors
   attr_reader :file, :args
 
