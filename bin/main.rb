@@ -5,13 +5,14 @@ require_relative '../lib/colon.rb'
 require_relative '../lib/semi_colon.rb'
 require_relative '../lib/zero_unit.rb'
 
+# rubocop: disable Style/MixinUsage
 include Indent
 include Space
 include Colon
 include SemiColon
 include ZeroUnit
 
-file = "../css_test.css"
+file = ARGV.shift
 b = Errors.new(file)
 
 bracket_message(b.args)
