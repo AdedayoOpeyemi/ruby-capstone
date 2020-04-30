@@ -14,7 +14,7 @@ module SemiColon
   def semi_colon_message(args)
     message_array = semi_colon_space args
     message_array.each do |x|
-      puts x.colorize(:light_red)
+      puts x.colorize(:light_green)
     end
   end
 end
